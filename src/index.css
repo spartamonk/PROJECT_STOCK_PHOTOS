@@ -157,7 +157,7 @@ Stock Photos
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   font-size: 1.5rem;
-  background: transparent;
+  background: red;
   color: var(--clr-grey-5);
   border-bottom: 3px solid var(--clr-grey-5);
 }
