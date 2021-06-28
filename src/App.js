@@ -13,13 +13,7 @@ const initialState = {
 }
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState)
-  
 
-
- 
-
-
-  
 
   const fetchPhotos = async() => {
     dispatch({ type: 'START_LOADING' })
@@ -58,6 +52,7 @@ if(state.query) {
 
   useEffect(() => {
     fetchPhotos()
+    // eslint-disable-next-line
   }, [state.page])
 
   useEffect(() => {
@@ -66,10 +61,11 @@ if(state.query) {
         !state.isLoading &&
         window.innerHeight + window.scrollY >= document.body.scrollHeight - 2
       ) {
-        dispatch({ type: 'LOAD_MORE_PHOTOS'})
+        dispatch({ type: 'LOAD_MORE_PHOTOS' })
       }
     })
     return () => window.removeEventListener('scroll', event)
+    // eslint-disable-next-line
   }, [])
 
   const handleSubmit = (e) => {

@@ -6,7 +6,7 @@ const Photo = ({
   likes,
   user: { name, portfolio_url:url, profile_image:{medium} },
 }) => {
-  return (
+  return ( 
     <article className="photo">
       <img src={regular} alt={alt} />
       <div className="photo-info">
