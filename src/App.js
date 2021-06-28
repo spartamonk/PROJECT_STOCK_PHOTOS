@@ -89,7 +89,7 @@ if(state.query) {
       <section className='photos'>
         <div className='photos-center'>
           {state.photos.map((photo, index) => {
-            return <Photo key={index} {...photo} />
+            return (url += `<Photo key={index} {...photo} />`)
           })}
         </div>
         {state.isLoading && <h2 className='loading'>loading...</h2>}
