@@ -17,7 +17,7 @@ function App() {
 
   const fetchPhotos = async() => {
     dispatch({ type: 'START_LOADING' })
-    let url ='';
+    let url;
 const pageUrl = `&page=${state.page}`
 const queryUrl = `&query=${state.query}`
 if(state.query) {
